@@ -3,7 +3,7 @@ from playwright.sync_api import sync_playwright
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
     page = browser.new_page()
-    page.goto("https://you.ctrip.com/sight/feixi2619/20464.html") # 爬取的页面地址
+    page.goto("https://you.ctrip.com/sight/feixi2619/20464.html") # 爬取的页面地址 以合肥三河景区为例
 
     for j in range(4): # 爬取4页
         comments = page.locator('div.commentDetail')
