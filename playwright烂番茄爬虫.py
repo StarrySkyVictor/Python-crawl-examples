@@ -4,7 +4,7 @@ with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
     page = browser.new_page()
     page.goto(
-        "https://www.rottentomatoes.com/m/ne_zha_ii/reviews?type=user",
+        "https://www.rottentomatoes.com/m/ne_zha_ii/reviews?type=user",# 以哪吒2为例，可自由更改
         wait_until="domcontentloaded"
     )
     for _ in range(5):  # 共爬取五页内容
